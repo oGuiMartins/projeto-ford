@@ -152,4 +152,4 @@ def api(val):
 
     return json.dumps(res)
 
-app.run(debug=True)
+app.run(debug=False)
