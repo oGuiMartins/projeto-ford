@@ -153,4 +153,4 @@ def api(val):
     return json.dumps(res)
 
 if __name__=='__main__': 
-    home()
+    app.run()
