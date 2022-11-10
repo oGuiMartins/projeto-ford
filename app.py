@@ -152,4 +152,5 @@ def api(val):
 
     return json.dumps(res)
 
-app.run(debug=False)
+if __name__=='__main__': 
+    main()
