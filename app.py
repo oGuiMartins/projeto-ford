@@ -3,6 +3,7 @@ import joblib as jb
 import pandas as pd
 import numpy as np
 import json
+import random
 
 app = Flask(__name__,template_folder='Arsha',static_folder='Arsha/assets')
 
