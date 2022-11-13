@@ -3,7 +3,7 @@ import joblib as jb
 import pandas as pd
 import numpy as np
 import json
-import random
+import onnx
 
 app = Flask(__name__,template_folder='Arsha',static_folder='Arsha/assets')
 
@@ -22,6 +22,7 @@ xgb_galaxy = jb.load("galaxy_xgb_pred.pkl.z")
 xgb_edge = jb.load("edge_xgb_pred.pkl.z")
 xgb_ka = jb.load("ka_xgb_pred.pkl.z")
 xgb_others = jb.load("others_xgb_pred.pkl.z")
+
 
 @app.route('/')
 def home():
@@ -153,5 +154,4 @@ def api(val):
 
     return json.dumps(res)
 
-if __name__=='__main__': 
-    app.run(host='0.0.0.0', debug=False, port=8080)
+app.run()
